@@ -1,3 +1,37 @@
+# React TodoList and Weather Exercises practices
+
+This is a starter codebase for a React application featuring a TodoList component and a Weather component. The TodoList allows users to manage their tasks, while the Weather component fetches and displays weather information.
+
+## Features
+
+- **TodoList Component:** Allows users to add, delete, and mark tasks as complete.
+- **Weather Component:** Fetches weather information and displays it to the user.
+
+## Technologies Used
+
+- React: JavaScript library for building user interfaces.
+- [Ant Design (antd)](https://ant.design/docs/react/introduce): A React UI library with a set of high-quality React components.
+- [OpenWeather API](https://openweathermap.org/api): Used to fetch weather data with open weather 2.5 just replace 3.0 to 2.5 .
+- npm: Node package manager for installing and managing dependencies.
+
+## Installation
+
+Install dependencies using npm:
+
+    ```
+    npm install
+    ```
+Install antd using npm:
+
+    ```
+    npm install antd
+    ```
+Install dotenv using npm:
+
+    ```
+    npm install dotenv
+    ```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
