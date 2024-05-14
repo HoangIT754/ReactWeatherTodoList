@@ -18,19 +18,12 @@ This is a starter codebase for a React application featuring a TodoList componen
 
 Install dependencies using npm:
 
-    ```
     npm install
-    ```
+
 Install antd using npm:
 
-    ```
     npm install antd
-    ```
-Install dotenv using npm:
 
-    ```
-    npm install dotenv
-    ```
 
 # Getting Started with Create React App
 
