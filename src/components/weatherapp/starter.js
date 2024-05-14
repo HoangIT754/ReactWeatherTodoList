@@ -8,53 +8,25 @@ const Weather = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const fetchWeatherData = async () => {
-      try {
-        const apiKey = process.env.REACT_APP_API_KEY;
-        if (!apiKey) {
-          throw new Error('API key not found. Make sure it is set in your .env file.');
-        }
-        const position = await getCurrentPosition();
-        const data = await fetchWeather(position.coords.latitude, position.coords.longitude, apiKey);
-        setWeatherData(data);
-        setIsLoading(false);
-      } catch (error) {
-        console.error('Fetch error:', error);
-        setErrorMessage(error.message || 'Error fetching weather data.');
-        setIsLoading(false);
-      }
-    };
-
-    fetchWeatherData();
+    // Add your API key
+    // Fetch current position
+    // Fetch weather data using latitude, longitude, and API key
   }, []);
 
   const getCurrentPosition = () => {
-    return new Promise((resolve, reject) => {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(resolve, reject);
-      } else {
-        reject(new Error('Geolocation is not supported by your browser.'));
-      }
-    });
+    // Function to get current position
   };
 
   const fetchWeather = async (latitude, longitude, apiKey) => {
-    const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`
-    );
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
+    // Function to fetch weather data
   };
 
   const kelvinToCelsius = (kelvin) => {
-    return (kelvin - 273.15).toFixed(1);
+    // Function to convert temperature from Kelvin to Celsius
   };
 
   const getWeatherIconUrl = (iconCode) => {
-    const iconType = iconCode.endsWith('n') ? iconCode.replace('n', 'd') : iconCode;
-    return `https://openweathermap.org/img/wn/${iconType}.png`;
+    // Function to get weather icon URL
   };
 
   return (
